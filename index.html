@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es-ch">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style/style.css">
+    <title>Encriptador de Texto</title>
+</head>
+<body>
+    <header class="cabecera">
+        <img src="assets/Logo.png" alt="Logo Alura">
+        <p>Bienvenid<span>a|o</span> <strong id="mjeBienvenida"></strong></p>
+    </header>
+    <main class="contenido">
+        <section class="seccionEncriptar">
+            <h1>Encriptador de Texto</h1>
+            <textarea placeholder="Escriba su texto aquí..."  id="valorUsuario"></textarea>
+            <p id="mjeError"></p>
+            <div class="seccionEncriptar__botones">
+                <button onclick="encriptarTexto();" id="cifrar" class="seccionEncriptar__botones__acciones">Encriptar</button>
+                <button onclick="desencriptarTexto();" id="descifrar" class="seccionEncriptar__botones__acciones">Desencriptar</button>
+            </div>
+            <button onclick="reiniciar();" id="reset" class="seccionEncriptar__boton__reiniciar" disabled>Reiniciar</button>
+            <h6 class="contenedorNotaExclamacion"><img src="assets/bi_exclamation-circle-fill.png" alt="Signo exclamación" id="img_exclamacion"> Solo letras minúsculas y sin acento.</6>
+        </section>
+        <section class="seccionCifrada__contenido">
+            <p id="mjeCifrado" onfocus="resaltar();"></p>
+            <div id="div_aOcultar">
+                <img src="assets/persona_interrogante.png" alt="Silueta persona y signo interrogación rojo">
+                <h1>No se ha encontrado ningún mensaje.</h1>
+                <h6>Ingrese el texto que va a encriptar o desencriptar.</h6>
+            </div>
+            <h5 id="mjeTextoCopiado"></h5>
+            <button onclick="copiarTexto();" id="copiar" class="seccionCifrada__contenido__boton" disabled>Copiar</button>
+        </section>
+    </main>
+    <footer class="pie_de_pagina">
+        <div class="pie_de_pagina__contacto nombre">
+            <p>Diana Bogdanic</p>
+            <p>Agosto 2024</p>
+        </div>
+        <div class="pie_de_pagina__contacto rrss">
+            <p>Contáctame: </p>
+            <a href="https://www.linkedin.com/in/diana-bogdanic-ba02a9208/"><img src="assets/logo_linkedin.png" alt="Logo LinkedIn"></a>
+            <a href="https://github.com/DianBogda"><img src="assets/logo_github.png" alt="Logo GitHub"></a>
+        </div>
+    </footer>
+    <script src="logica.js"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+</body>
+</html>
